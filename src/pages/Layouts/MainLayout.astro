@@ -1,0 +1,16 @@
+---
+import MainHeader from "./MainHeader.astro";
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title = "Welcome | Aliakbar Zohour Blog", description } =
+  Astro.props as Props;
+---
+
+<html lang="en">
+  <MainHeader {title} {description} />
+  <body>
+    <slot />
+  </body>
+</html>
