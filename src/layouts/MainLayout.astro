@@ -1,6 +1,11 @@
 ---
+// Import Components
 import MainHeader from "./MainHeader.astro";
+import Navbar from "../components/navbar/Navbar.astro";
+import Footer from "../components/footer/Footer.astro";
+// Import Global Styles
 import "../styles/global.css";
+
 interface Props {
   title?: string;
   description?: string;
@@ -11,7 +16,9 @@ const { title = "Welcome | Aliakbar Zohour Blog", description } =
 
 <html lang="en">
   <MainHeader {title} {description} />
-  <body>
+  <body class="flex flex-col justify-between items-center min-h-[100dvh] bg-gray-100">
+    <Navbar />
     <slot />
+    <Footer />
   </body>
 </html>
