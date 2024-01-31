@@ -3,3 +3,8 @@
 *{
     font-family: 'Atkinson Hyperlegible', sans-serif;
 }
+
+.active-link{
+    color: rgb(76, 76, 250);
+    transition: all linear .4s;
+}
