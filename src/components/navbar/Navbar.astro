@@ -1,0 +1,26 @@
+---
+// data imports
+import navData from "../../data/navData";
+---
+
+<nav class="w-full p-5 shadow-md bg-white">
+  <div class="w-full flex justify-between items-center">
+    <a href="/" class="logomark" aria-label="Go Home">Aliakbar Zohour</a>
+    <ul class="w-max">
+      {
+        navData.map((item) => (
+          <a
+            href={item.path}
+            class="navLink cursor-pointer py-5 px-6 font-medium"
+          >
+            {item.name}
+          </a>
+        ))
+      }
+    </ul>
+  </div>
+</nav>
+
+<script>
+  import "../../js/nav.js";
+</script>
