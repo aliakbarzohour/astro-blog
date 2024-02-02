@@ -5,6 +5,10 @@
 }
 
 .active-link{
-    color: rgb(76, 76, 250);
+    color: #fdba74;
     transition: all linear .4s;
+}
+.loaded {
+    opacity: 0;
+    visibility: hidden;
 }
