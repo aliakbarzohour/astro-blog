@@ -16,9 +16,13 @@ const { title = "Welcome | Aliakbar Zohour Blog", description } =
 
 <html lang="en">
   <MainHeader {title} {description} />
-  <body class="flex flex-col justify-between items-center min-h-[100dvh] bg-gray-100">
+  <body
+    class="flex flex-col justify-between items-center min-h-[100dvh] bg-gray-100"
+  >
     <Navbar />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
