@@ -1,0 +1,52 @@
+---
+// library imports
+// Import the <Image /> component
+import { Image } from "astro:assets";
+import { slugify } from "../../js/utils";
+const { frontmatter, url, tagType } = Astro.props;
+const { title, description, date, category, author, image } = frontmatter;
+
+const Tag = tagType;
+---
+
+<article
+  class="card group bg-white shadow-sm pb-5 w-fit max-w-[360px] relative hover:cursor-pointer duration-300"
+>
+  <small>
+    <a
+      href={`/category/${slugify(category)}`}
+      class="badge bg-slate-800 text-white px-3 py-1 rounded-sm absolute left-0 -top-6"
+    >
+      {category}
+    </a>
+  </small>
+  <a href={url}>
+    <Image
+      src={image.src}
+      alt={image.alt}
+      width="400"
+      height="250"
+      format="webp"
+      fit="cover"
+      quality={80}
+      aspectRatio="4:1"
+      class="overflow-hidden max-h-[250px]"
+    />
+  </a>
+  <div class="content p-3 mb-2">
+    <div>
+      <Tag class="font-bold text-xl group-hover:text-slate-500 duration-300">
+        <a href={url}>{title}</a>
+      </Tag>
+      <small
+        >by <a href={`/author/${slugify(author)}`}>{author}</a> . {date}</small
+      >
+    </div>
+    <p class="text-xs text-gray-400">{description}</p>
+  </div>
+  <a
+    href={url}
+    class="bg-blue-600 rounded-lg px-8 py-2 text-white hover:bg-blue-800 duration-300 mx-3"
+    >Read Post</a
+  >
+</article>
