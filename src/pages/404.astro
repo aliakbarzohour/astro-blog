@@ -2,17 +2,17 @@
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout>
+<MainLayout title="Page Not Found">
   <div
-    class="container mx-auto grid items-center gap-10 justify-items-center text-center"
+    class="container mx-auto grid items-center gap-7 justify-items-center text-center"
   >
     <div class="content grid gap-3">
-      <h1 class="font-bold text-5xl text-orange-400">Whooops!</h1>
-      <p class="opacity-50 font-bold text-2xl">
+      <h1 class="font-bold text-5xl text-orange-500">Whooops!</h1>
+      <p class="opacity-50 font-semibold text-2xl">
         Looks Like This Page Went On Vacation.
       </p>
     </div>
-    <button>Back To Home</button>
+    <a href="/about/" class="bg-slate-800 text-white px-8 py-2 rounded-xl">Back To Home</a>
   </div>
 </MainLayout>
 
