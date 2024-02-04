@@ -1,9 +1,25 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-
+import PostCard from "../../components/postCard/PostCard.astro";
+const allPosts = await Astro.glob("./*.md");
+console.log(allPosts);
 ---
 
 <MainLayout>
-    <h1>hi from blog</h1>
-    <a href="./post-1/">Post 1</a>
+  <section class="my-10 overflow-hidden">
+    <h1 class="w-full text-center font-bold text-5xl">Blog</h1>
+    <div
+      class="w-full grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-[1000px] mx-auto px-4 mt-12 items-stretch justify-items-center"
+    >
+      {
+        allPosts.map((post) => (
+          <PostCard
+            frontmatter={post.frontmatter}
+            url={post.url}
+            tagType="h2"
+          />
+        ))
+      }
+    </div>
+  </section>
 </MainLayout>
