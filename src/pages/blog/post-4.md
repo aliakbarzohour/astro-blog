@@ -1,15 +1,15 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
-title:  "Use pacman in Arch Linux and ‌manjaro"
-date:  Nov 18, 2021
+title:  "Let’s be full stack!"
+date:  Nov 19, 2021
 author:  Aliakbar Zohour
 image: {
-    src: "/images/post-1.webp",
+    src: "/images/post-4.webp",
     alt: "Arch Linux Package Manager",
 }
-description:  "If you use Arch Linux or any Arch-based Linux (such as Manjaro and Arco), be sure to tackle the Pacman Manager package."
+description:  "I invite you to an extremely attractive challenge, a challenge that will turn you into a full-fledged developer in a few months."
 draft: false
-category:  package-manager
+category:  development
 
 ---
 

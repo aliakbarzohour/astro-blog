@@ -1,15 +1,15 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
-title:  "Use pacman in Arch Linux and ‌manjaro"
+title:  "Introducing Alpine Linux!"
 date:  Nov 18, 2021
 author:  Aliakbar Zohour
 image: {
-    src: "/images/post-1.webp",
+    src: "/images/post-3.jpeg",
     alt: "Arch Linux Package Manager",
 }
 description:  "If you use Arch Linux or any Arch-based Linux (such as Manjaro and Arco), be sure to tackle the Pacman Manager package."
 draft: false
-category:  package-manager
+category:  linux
 
 ---
 
